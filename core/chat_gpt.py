@@ -7,6 +7,7 @@ def get_chat_gpt_response(question):
     :param text:
     :return:
     """
+    print("sending: "+question+" to Chat GPT")
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
@@ -17,5 +18,5 @@ def get_chat_gpt_response(question):
     result = ''
     for choice in response.choices:
         result += choice.message.content
-
+    print("Chat GPT said: "+result)
     return result
