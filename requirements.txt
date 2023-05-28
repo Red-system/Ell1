@@ -1,0 +1,8 @@
+openai
+numpy
+sounddevice
+scipy
+pydub
+soundfile
+elevenlabs
+python-dotenv
