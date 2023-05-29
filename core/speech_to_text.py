@@ -10,7 +10,7 @@ def get_voice_input():
     - save audio file
     - return audio file path
     """
-    duration = 8.0  # seconds
+    duration = 5.0  # seconds
     samplerate = 48000  # Hz
     microphone_id = 1  # Use sd.query_devices() to select your recording device in channels
     print('Recording...')
@@ -29,4 +29,4 @@ def speech_to_text():
     """
     audio_file = get_voice_input()
     transcript = openai.Audio.transcribe("whisper-1", audio_file)
-    return transcript["text"]
+    return transcript["text"] #sends string

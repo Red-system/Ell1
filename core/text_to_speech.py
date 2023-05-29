@@ -3,6 +3,7 @@ from elevenlabs import generate, play
 
 def text_to_speech(response):
     print("Sending to TTS")
+    print (response)
     audio = generate(
         text=response,
         voice="Domi",
